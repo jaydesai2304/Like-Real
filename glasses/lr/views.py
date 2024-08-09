@@ -90,7 +90,7 @@ class ForgotView(generics.CreateAPIView):
         request.session["otp"] = otp
         email = EmailMessage(body=otp, to=[email])
         email.send()
-        return redirect("otppage")
+        return redirect("otp")
 
 
 class OtpView(generics.CreateAPIView):
