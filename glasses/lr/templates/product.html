@@ -1,0 +1,47 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Porduct</title>
+	<link rel="stylesheet" href="{% static 'product.css' %}" />
+
+</head>
+
+<body>
+
+	<form>
+		{% csrf_token %}
+
+		<!-- Product details -->
+		<div class="product">
+			<div class="card">
+				<div class="imgBx">
+					<img src="{{ product_details.image.url }}" alt="">
+				</div>
+				<div class="details">
+					<h3>{{ product_details.name }}</h3>
+					<h4>Model NO : {{ product_details.modelnumber }} <br>
+						Frame Size : {{ product_details.framesize }} <br>
+						Frame width : {{ product_details.framewidth }}<br>
+						Frame color : {{ product_details.framecolour }}</h4>
+
+					<div class="group">
+						<h2>${{ product_details.price }}</h2>
+						<span>
+							<button><a href="/home/product/add_to_cart/{{product_details.id}}/">ADD TO CARD</a></button>
+							<button><a href="/shop/">Back</a></button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script src="{% static 'js/loder.js'%}"> </script>
+
+</body>
+
+</html>
