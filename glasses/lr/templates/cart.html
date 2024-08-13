@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html>
 
 <head>
@@ -23,8 +22,6 @@
 
 	<!-- fonts style -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -55,7 +52,6 @@
 							<li class="nav-item">
 								<a class="nav-link" href="{% url 'about' %}">About us</a>
 							</li>
-
 							<li class="nav-item">
 								<a class="nav-link" href="{% url 'contact' %}">Contact us</a>
 							</li>
@@ -121,12 +117,6 @@
 															<label id="quantity{{x.product.id}}" name="quantity{{x.id}}"
 																class="form-control quantity-input"
 																type="number">{{x.quantity}}</label>
-
-															<!-- <input type="number" name="quantity{{x.id}}"
-																id="quantity{{x.product.id}}"
-																value="{{x.product.id}}" min="1" max="10"
-																style="padding:1 px 1px 1 px 1px;width:40%;"
-																onchange="this.form.submit();"> -->
 														</div>
 														<div class="col-md-3 price">
 															<span>${{x.product.price}}</span>
@@ -147,7 +137,6 @@
 									</div>
 								</div>
 							</div>
-
 							<div class="col-md-12 col-lg-4">
 								<div class="summary">
 									<h3>Summary</h3>
@@ -167,7 +156,6 @@
 			</section>
 		</form>
 	</main>
-
 	<!-- footer section -->
 	<section class="container-fluid footer_section">
 		<p>
@@ -181,7 +169,5 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="{% static 'js/loder.js'%}"> </script>
-
 </body>
-
 </html>
