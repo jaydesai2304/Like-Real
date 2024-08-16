@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html>
 
 <head>
@@ -23,7 +22,6 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -80,11 +78,9 @@
     <form action="{% url 'payment' %}" method="post">
       {% csrf_token %}
       <section class="payment-form dark" style="padding-top: 77px;">
-
         <div class="block-heading">
           <h2>Payment</h2>
         </div>
-
         <div class="container">
 
           {% if messages %}
@@ -109,10 +105,8 @@
             {% endfor %}
             <div class="summary-item"><span class="text">shipping charges</span><span class="price">$10</span></div>
 
-
             <div class="total">Total<span class="price">${{total_price}}</span></div>
           </div>
-
           <div class="card-details">
             <h3 class="title">Credit Card Details</h3>
             <div class="row">
@@ -161,6 +155,7 @@
     </p>
   </section>
   <!-- footer section -->
+
   <script src="{% static 'js/bootstrap.js'%}"> </script>
   <script src="{% static 'js/custom.js'%}"> </script>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"> </script>
@@ -169,5 +164,4 @@
   <script src="{% static 'js/loder.js'%}"> </script>
 
 </body>
-
 </html>
