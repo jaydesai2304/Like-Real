@@ -19,7 +19,6 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
-
 </head>
 
 <body>
@@ -72,12 +71,8 @@
   </header>
   <!-- end header section -->
 
-
   <!-- address detils -->
-
   <div class="container">
-
-
     <h1>Shipping</h1>
     <p>Please enter your shipping details.</p>
     <hr />
@@ -85,9 +80,7 @@
     <form action="{% url 'Address' %}" method="post">
       {% csrf_token %}
       <div class="for">
-
         <div class="fields fields--2">
-
           <label class="field">
             <span class="field__label" for="locality">locality</span>
             <input class="field__input" type="text" name="locality" required>
@@ -115,26 +108,22 @@
             <span class="field__label" for="state">State</span>
             <input class="field__input" type="text" name="state" required>
           </label>
-
         </div>
-
       </div>
       <hr>
       <button type="submit" class="button">Continue</button>
     </form>
   </div>
-
   <!-- address detalis end -->
 
   <!-- footer section -->
-
   <section class="container-fluid footer_section">
     <p>
       Copyright &copy; <span id="displayYear"></span> All Rights Reserved By Like-Real
     </p>
   </section>
-
   <!-- footer section -->
+
   <script src="{% static 'js/bootstrap.js'%}"> </script>
   <script src="{% static 'js/custom.js'%}"> </script>
   <script src="{% static 'js/jquery-3.4.1.min.js' %}"> </script>
@@ -142,7 +131,5 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="{% static 'js/loder.js'%}"> </script>
 
-
 </body>
-
 </html>
