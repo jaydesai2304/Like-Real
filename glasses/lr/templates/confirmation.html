@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html>
 
 <head>
@@ -33,11 +32,9 @@
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
   <!-- header section strats -->
   <header class="header_section">
     <div class="container-fluid">
@@ -89,22 +86,18 @@
   <form action="{% url 'confirm' %}" method="post">
     <div class="lr">
       <h1>Order Confirmation</h1>
-
       <p align="center">Thank you for your order!</p>
-
       <div class="order-details">
         <h2>Your Order Details</h2>
         <p><strong>Order Number:</strong> <span id="orderNumber"></span></p>
         <p><strong>Date:</strong> {% now "d-m-20y" %} </p>
         <p><strong>Total:</strong> ${{total_price}} </p>
-
         <button type="submit">shop</button>
       </div>
-
     </div>
   </form>
-  <!-- Footer Section -->
 
+  <!-- Footer Section -->
   <section class="containerr-fluid footer_section">
     <p>
       Copyright &copy; <span id="displayYear"></span> All Rights Reserved By
@@ -112,6 +105,7 @@
     </p>
   </section>
   <!-- End Footer Section -->
+
   <script>
     // Function to generate a random order number
     function generateRandomOrderNumber() {
@@ -130,5 +124,4 @@
   <script src="{% static 'js/loder.js'%}"> </script>
 
 </body>
-
 </html>
